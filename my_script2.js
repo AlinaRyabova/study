@@ -140,3 +140,46 @@ const grade = 55;
 // }
 // console.log(toggleModalVisibility(true));
 // console.log(toggleModalVisibility(false));
+// function getSubstring(string, length) {
+//   return string.slice(0, length);
+// }
+// console.log(getSubstring("Hello world", 3));
+// function normalizeInput(input, to) {
+//   if (to === "upper") {
+//     return input.toUpperCase();
+//   } else if (to === "lower") {
+//     return input.toLowerCase();
+//   }
+// }
+// console.log(normalizeInput("This ISN'T SpaM", "upper"));
+// console.log(normalizeInput("This ISN'T SpaM", "lower"));
+// function checkForName(fullName, firstName) {
+//   return fullName.toLowerCase().includes(firstName.toLowerCase());
+// }
+// console.log(checkForName("Jason Neis", "Jason"));
+// console.log(checkForName("Jason Neis", "jAsOn"));
+// console.log(checkForName("Caty Stars", "Andromeda"));
+// function checkFileExtension(fileName, ext) {
+//   if (fileName.toLowerCase().endsWith(ext)) {
+//     return "File extension matches";
+//   } else {
+//     return "File extension does not match";
+//   }
+// }
+// console.log(checkFileExtension("styles.css", ".css"));
+// console.log(checkFileExtension("styles.css", ".js"));
+// function getFileName(file) {
+//   const dotIndex = file.indexOf(".");
+//   if (dotIndex === -1) {
+//     return file;
+//   } else {
+//     return file.slice(0, dotIndex);
+//   }
+// }
+// console.log(getFileName("styles.css"));
+// console.log(getFileName("app.js"));
+// console.log(getFileName("app"));
+// function createFileName(name, ext) {
+//   return name.trim() + "." + ext;
+// }
+// console.log(createFileName(" order ", "txt"));
