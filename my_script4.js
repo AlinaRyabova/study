@@ -168,14 +168,221 @@
 // const values = Object.values(apartment);
 // console.log(keys);
 // console.log(values);
-function countTotalSalary(salaries) {
-  let totalSalary = 0;
-  const values = Object.values(salaries);
-  for (const value of values) {
-    totalSalary += value;
-  }
-  return totalSalary;
-}
-console.log(countTotalSalary({ mango: 100, poly: 150, alfred: 80 }));
-console.log(countTotalSalary({ kiwi: 200, poly: 50, ajax: 150 }));
-console.log(countTotalSalary({}));
+// function countTotalSalary(salaries) {
+//   let totalSalary = 0;
+//   const values = Object.values(salaries);
+//   for (const value of values) {
+//     totalSalary += value;
+//   }
+//   return totalSalary;
+// }
+// console.log(countTotalSalary({ mango: 100, poly: 150, alfred: 80 }));
+// console.log(countTotalSalary({ kiwi: 200, poly: 50, ajax: 150 }));
+// console.log(countTotalSalary({}));
+// const books = [
+//   { title: "The Last Kingdom", author: "Bernard Cornwell", rating: 8.2 },
+//   { title: "Beside Still Waters", author: "Robert Sheckley", rating: 9 },
+//   {
+//     title: "The Dream of a Ridiculous Man",
+//     author: "Fyodor Dostoevsky",
+//     rating: 6.8,
+//   },
+// ];
+
+// const titles = [];
+
+// for (const book of books) {
+//   titles.push(book.title);
+// }
+
+// console.log(titles); // ["The Last Kingdom", "Beside Still Waters", "The Dream of a Ridiculous Man"]
+
+// const colors = [
+//   { hex: "#f44336", rgb: "244,67,54" },
+//   { hex: "#2196f3", rgb: "33,150,243" },
+//   { hex: "#4caf50", rgb: "76,175,80" },
+//   { hex: "#ffeb3b", rgb: "255,235,59" },
+// ];
+// const hexColors = [];
+// const rgbColors = [];
+// for (const color of colors) {
+//   hexColors.push(color.hex);
+//   rgbColors.push(color.rgb);
+// }
+// console.log(hexColors);
+// console.log(rgbColors);
+// function getProductPrice(productName) {
+//   const products = [
+//     { name: "Radar", price: 1300, quantity: 4 },
+//     { name: "Scanner", price: 2700, quantity: 3 },
+//     { name: "Droid", price: 400, quantity: 7 },
+//     { name: "Grip", price: 1200, quantity: 9 },
+//   ];
+//   for (const product of products) {
+//     if (product.name === productName) {
+//       return product.price;
+//     }
+//   }
+// }
+// console.log(getProductPrice("Radar"));
+// console.log(getProductPrice("Droid"));
+// console.log(getProductPrice("Engine"));
+// function getAllPropValues(propName) {
+//   const products = [
+//     { name: "Radar", price: 1300, quantity: 4 },
+//     { name: "Scanner", price: 2700, quantity: 3 },
+//     { name: "Droid", price: 400, quantity: 7 },
+//     { name: "Grip", price: 1200, quantity: 9 },
+//   ];
+//   let values = [];
+//   for (const product of products) {
+//     if (propName in product) {
+//       values.push(product[propName]);
+//     }
+//   }
+//   return values;
+// }
+
+// console.log(getAllPropValues("name"));
+// console.log(getAllPropValues("price"));
+// console.log(getAllPropValues("quantity"));
+// function calculateTotalPrice(productName) {
+//   const products = [
+//     { name: "Radar", price: 1300, quantity: 4 },
+//     { name: "Scanner", price: 2700, quantity: 3 },
+//     { name: "Droid", price: 400, quantity: 7 },
+//     { name: "Grip", price: 1200, quantity: 9 },
+//   ];
+//   for (const product of products) {
+//     if (product.name === productName) {
+//       return product.price * product.quantity;
+//     }
+//   }
+//   return `Product ${productName} not found!`;
+// }
+// console.log(calculateTotalPrice("Radar"));
+// console.log(calculateTotalPrice("Scanner"));
+// console.log(calculateTotalPrice("Blaster"));
+// console.log(calculateTotalPrice("Droid"));
+// console.log(calculateTotalPrice("Grip"));
+// const bookShelf = {
+//   books: ["The Last Kingdom"],
+//   getBooks() {
+//     return this.books;
+//   },
+//   addBook(bookName) {
+//     this.books.push(bookName);
+//   },
+// };
+
+// console.log(bookShelf.getBooks()); // ["The Last Kingdom"]
+// bookShelf.addBook("The Mist");
+// bookShelf.addBook("Dream Guardian");
+// console.log(bookShelf.getBooks()); // ["The Last Kingdom", "The Mist", "Dream Guardian"]
+// const atTheOldToad = {
+//   potions: [
+//     { name: "Speed potion", price: 460 },
+//     { name: "Stone skin", price: 520 },
+//   ],
+//   getPotions() {
+//     return this.potions;
+//   },
+
+//   addPotion(newPotion) {
+//     this.potions.push(newPotion);
+//   },
+//   getTotalPrice() {
+//     let total = 0;
+//     for (const potion of this.potions) {
+//       total += potion.price;
+//     }
+//     return total;
+//   },
+// };
+// console.log(atTheOldToad.getPotions());
+// // console.log(atTheOldToad.addPotion("Invisibility"));
+// // console.log(atTheOldToad.addPotion("Power potion"));
+// atTheOldToad.addPotion({ name: "Invisibility", price: 620 });
+// atTheOldToad.addPotion({ name: "Power potion", price: 270 });
+// console.log(atTheOldToad.getPotions());
+// console.log(atTheOldToad.getTotalPrice());
+
+// const atTheOldToad = {
+//   potions: [
+//     { name: "Speed potion", price: 460 },
+//     { name: "Stone skin", price: 520 },
+//   ],
+//   getPotions() {
+//     return this.potions;
+//   },
+//   updatePotionName(oldName, newName) {
+//     for (const potion of this.potions) {
+//       if (potion.name === oldName) {
+//         potion.name = newName;
+//       }
+//     }
+//     return this.potions;
+//   },
+// };
+// console.log(atTheOldToad.updatePotionName("Stone skin", "Invisibility"));
+// console.log(atTheOldToad.updatePotionName("Speed potion", "Polymorth"));
+// console.log(...[1, 2, 3]);
+
+// function add(...args) {
+//   let total = 0;
+//   for (const arg of args) {
+//     total += arg;
+//   }
+//   return total;
+// }
+// console.log(add(15, 27));
+// console.log(add(32, 6, 13, 19, 8));
+
+// function addOverNum(value, ...args) {
+//   let total = 0;
+//   for (const arg of args) {
+//     if (arg > value) {
+//       total += arg;
+//     }
+//   }
+//   return total;
+// }
+// console.log(addOverNum(50, 15, 27));
+// console.log(addOverNum(20, 74, 11, 62, 46, 12, 36));
+// function getExtremeScores(scores) {
+//   const best = Math.max(...scores);
+//   const worst = Math.min(...scores);
+//   return { best, worst };
+// }
+// console.log(getExtremeScores([89, 64, 42, 17, 93, 51, 26]));
+// const firstGroupScores = [64, 42, 93];
+// const secondGroupScores = [89, 14, 51, 26];
+// const thirdGroupScores = [29, 47, 18, 97, 81];
+
+// const allScores = [
+//   ...firstGroupScores,
+//   ...secondGroupScores,
+//   ...thirdGroupScores,
+// ];
+// const bestScore = Math.max(...allScores);
+// const worstScore = Math.min(...allScores);
+
+// console.log(allScores);
+// console.log(bestScore); // 97
+// console.log(worstScore); // 14
+const defaultSettings = {
+  theme: "light",
+  public: true,
+  withPassword: false,
+  minNumberOfQuestions: 10,
+  timePerQuestion: 60,
+};
+const overrideSettings = {
+  public: false,
+  withPassword: true,
+  timePerQuestion: 30,
+};
+
+const finalSettings = { ...defaultSettings, ...overrideSettings };
+
+console.log(finalSettings);
